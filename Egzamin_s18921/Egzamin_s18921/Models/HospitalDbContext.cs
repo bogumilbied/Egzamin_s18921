@@ -27,9 +27,10 @@ namespace Egzamin_s18921
         {
             base.OnModelCreating(modelBuilder);
             modelBuilder.Entity<PrescriptionMedicament>().HasKey(k => new { k.IdMedicament, k.IdPrescription });
+            
 
             List<Doctor> listDoctors = new List<Doctor>();
-            listDoctors.Add(new Doctor {Id=1, IdDoctor = 1, FirstName = "Jan", LastName = "Kowalski", Email = "123@g.com" });
+            listDoctors.Add(new Doctor {Id=1, IdDoctor = 1, FirstName = "Jakub", LastName = "Kowalski", Email = "123@g.com" });
             listDoctors.Add(new Doctor { Id = 2, IdDoctor = 2, FirstName = "Kuba", LastName = "Nowak", Email = "1243@g.com" });
             listDoctors.Add(new Doctor { Id = 3, IdDoctor = 3, FirstName = "Kan", LastName = "Bowal", Email = "1235@g.com" });
             modelBuilder.Entity<Doctor>().HasData(listDoctors);
@@ -41,9 +42,9 @@ namespace Egzamin_s18921
             modelBuilder.Entity<Medicament>().HasData(listMedicaments);
 
             List<Patient> listPatients = new List<Patient>();
-            listPatients.Add(new Patient { IdPatient = 1, FirstName = "Cezary", LastName = "Boguszewski", Birthdate = Convert.ToDateTime("2021-01-01") });
-            listPatients.Add(new Patient { IdPatient = 2, FirstName = "Konrad", LastName = "Sztynks", Birthdate = Convert.ToDateTime("2021-02-02") });
-            listPatients.Add(new Patient { IdPatient = 3, FirstName = "Piotr", LastName = "Gago", Birthdate = Convert.ToDateTime("2021-03-10") });
+            listPatients.Add(new Patient { IdPatient = 1, FirstName = "Jakub", LastName = "Kowalski", Birthdate = Convert.ToDateTime("2021-01-01") });
+            listPatients.Add(new Patient { IdPatient = 2, FirstName = "Bogumił", LastName = "Biedrzycki", Birthdate = Convert.ToDateTime("2021-02-02") });
+            listPatients.Add(new Patient { IdPatient = 3, FirstName = "Tomasz", LastName = "Tomasz", Birthdate = Convert.ToDateTime("2021-03-10") });
             modelBuilder.Entity<Patient>().HasData(listPatients);
 
             List<Prescription> listPrescriptions = new List<Prescription>();
